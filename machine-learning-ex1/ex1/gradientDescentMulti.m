@@ -16,7 +16,9 @@ for iter = 1:num_iters
     % Hint: While debugging, it can be useful to print out the values
     %       of the cost function (computeCostMulti) and gradient here.
     %
-
+    diffJ = (1/m)*sum(X.*repmat((X*theta - y), 1, size(X,2)));
+    theta = (theta' - (alpha * diffJ))';
+    
 
 
 
